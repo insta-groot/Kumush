@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Before and After</title>
+	<style type="text/css">
+		
+        body{
+        	margin: 0;
+        	padding: 0;
+        	background: #dded;
+        	display: flex;
+        	justify-content: center;
+        	align-items: center;
+        	height: 100vh;
+        }
+        .head{
+            margin-left: -180px;
+        	width: 120px;
+        	height: 120px;
+            background: #c1121f;
+            transform: rotate(-45deg);
+            animation: ishla 1s linear infinite;
+            box-shadow: 0 0 80px black;
+        }
+        @keyframes ishla{
+        	0%{
+        		transform: rotate(-45deg) scale(0.1);
+        	}
+        	50%{
+        		transform: rotate(-53deg) scale(0.5);
+        	}
+        	100%{
+        		transform: rotate(-60deg) scale(1);
+        	}
+        }
+        .head::before{
+        	content: "";
+        	width: 120px;
+        	height: 120px;
+        	background: #c1121f;
+        	position: absolute;
+        	top: -50px;
+        	border-radius: 50%;
+        	box-shadow: 0 0 80px #c1121f;
+        }
+        .head::after{
+        	content: "";
+        	width: 120px;
+        	height: 120px;
+        	background: #c1121f;
+        	position: absolute;
+        	right: -50px;
+        	border-radius: 50%;
+        	box-shadow: 0 0 80px #c1121f;
+        }
+        .yozuv {
+            position: relative;
+            left: -50px;
+            top:-300px;
+        }
+
+	</style>
+</head>
+<body>
+    <div class="yozuv">
+        <h1 align="center">Kumush!<br>It's for you!</h1>
+    </div>
+	<div class="head">
+		<h1 style="position: absolute; top: -0%; left: 10%; z-index: 5; transform: rotate(45deg); text-align: center; color: white;">Kumush❤️</h1>
+	</div>
+
+</body>
+</html>
